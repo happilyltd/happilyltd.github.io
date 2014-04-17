@@ -9,11 +9,20 @@ h1 {
 	margin: 1rem auto;
 	max-width:20rem;
 }
-input {
+input, #mc_embed_signup form input {
 	font-size: 1rem;
 	padding: 0.5rem;
 	-webkit-appearance: none;
 	background-color: white;
 	border: 1px solid #ddd;
 	width:100%;
+}
+
+input[type=email],input[type=text] {
+	border:none;
+	text-decoration:underline;
+}
+
+#mc_embed_signup form {
+	padding:none;
 }
