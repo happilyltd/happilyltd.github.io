@@ -4,25 +4,43 @@ body {
 }
 h1 {
 	font-size: 2.5rem;
+	margin:0 auto 1rem auto;
+}
+p {
+	margin:0 auto 1rem auto;
 }
 .main {
 	margin: 1rem auto;
-	max-width:20rem;
+	max-width: 20rem;
 }
-input, #mc_embed_signup form input {
+input {
 	font-size: 1rem;
 	padding: 0.5rem;
 	-webkit-appearance: none;
 	background-color: white;
 	border: 1px solid #ddd;
-	width:100%;
+	width: 100%;
+	border-radius:2px;
+	margin:0 auto 1rem auto;
 }
-
-input[type=email],input[type=text] {
-	border:none;
-	text-decoration:underline;
+input.button {
+	clear: both;
+	background-color: #999;
+	border: 0 none;
+	color: #FFFFFF;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 15px;
+	font-weight: bold;
+	height: 32px;
+	line-height: 32px;
+	margin: 0 5px 10px 0;
+	padding: 0;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: top;
+	white-space: nowrap;
 }
-
-#mc_embed_signup form {
-	padding:none;
+input.button:hover {
+	background-color:#777;
 }
