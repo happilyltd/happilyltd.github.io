@@ -48,12 +48,24 @@ input.button:hover {
 
 /* Train line stuff */
 
+.bottom-right-invisible-trigger {
+	width:3rem;
+	height:3rem;
+	position:absolute;
+	bottom:0;
+	right:0;
+	background:none;
+	display:block;
+}
+
 .train-line {
 	position:absolute;
-	left:100%;
 	width:100%;
-	height:100%;
-	bottom:0;
+	height:1.5rem;
+	bottom:10%;
+	left:0;
+	-webkit-transform: scale(0);
+	-webkit-transition: all .2s ease-in-out;
 }
 
 .train-line .line {
@@ -62,10 +74,56 @@ input.button:hover {
 	bottom:0.5rem;
 	position: absolute;
 }
-.train-line .line.vertical {
+.train-line .vertical {
 	transform: rotate(90deg);
 }
 
-.train-line.animating {
-	left:0%;
+.animating {
+	-webkit-transform: scale(1.0);
+	left:0;
+}
+
+.train {
+	width:10%;
+	height:100%;
+	/*background-color:black;*/
+	display:block;
+	position:absolute;
+	top:0;
+	line-height:9%;
+}
+
+.train-car {
+	float:left;
+	width:30%;
+	margin:0 1%;
+	display:inline-block;
+	border-radius:1px;
+	background-color:white;
+	border:1px solid #ccc;
+	height:100%;
+	top:0;
+	box-sizing:border-box;
+}
+
+@-webkit-keyframes rollondowntheline {
+	0% {
+		left:90%;
+	}
+
+	20% {
+		left: 90%;
+	}
+
+	80% {
+		left:0;
+	}
+
+	100% {
+		left:0;
+	}
+}
+
+.animating .train {
+	-webkit-animation: rollondowntheline 9s infinite alternate ease-in-out;
 }
